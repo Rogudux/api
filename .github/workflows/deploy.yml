@@ -11,6 +11,9 @@ jobs:
         steps:
             - name: clonar repositorio
               uses: actions/checkout@v4
+            
+            - name: docker login
+              run: docker login -u "{{ secrets.DOCKER_USERNAME }}" -p "{{secrets.DOCKER_PASSWORD}}"
 
             - name: crear imagen
               run: docker build -t bastian13579/api:latest .
