@@ -12,12 +12,10 @@ jobs:
         steps:
             - name: clonar repositorio
               uses: actions/checkout@v4
-            
-            - name: Checkout code
-              uses: actions/checkout@v2
 
             - name: Login to Docker Hub
-              run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+              run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
+
 
             - name: crear imagen
               run: docker build -t bastian13579/api:latest .
