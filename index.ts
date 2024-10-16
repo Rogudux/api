@@ -19,4 +19,5 @@ server.post("/",(req:Request,res:Response)=>{
 server.listen(3000,()=>{
     console.log("Escuchando en puerto 3000");
     console.log("Hola das")
+    console.log("rnfibd")
 });

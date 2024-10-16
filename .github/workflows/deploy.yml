@@ -1,0 +1,16 @@
+name: deploy to dockerhub
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    build-publish:
+        runs-on: ubuntu-latest
+        steps:
+            - name: clonar repositorio
+              uses: actions/checkout@v4
+
+            - name: crear imagen
+              run: docker build -t bastian13579/api:latest .
