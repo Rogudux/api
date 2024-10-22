@@ -12,5 +12,5 @@ COPY . .
 
 #Como es el ultimo comando para levantar el contendor se usa CMD donde el codgio va en corchetes, separado por comas y entre comillas
 RUN npm run build
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]
 
