@@ -75,7 +75,7 @@ server.put("/todos/:id", async (req: Request, res: Response): Promise<void> => {
         }
 
         const { title, descripcion, completed } = req.body;
-
+        
         const homework = await Homework.findByPk(id);
 
         if (!homework) {
